@@ -105,3 +105,122 @@ CMake Deprecation Warning at /root/opencv/cmake/OpenCVGenPkgconfig.cmake:113 (cm
   to work with policies introduced by <max> or earlier.
 
 ```
+encounter the following error:
+
+```
+[ 37%] Building NVCC (Device) object modules/dnn/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_grid_nms.cu.o
+[ 37%] Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/matchers.cpp.o
+/root/opencv/modules/dnn/src/cuda/grid_nms.cu(98): warning #20054-D: dynamic initialization is not supported for a function-scope static __shared__ variable within a __device__/__global__ function
+          __attribute__((shared)) vector_type group_i_boxes[BLOCK_SIZE];
+                                              ^
+          detected during:
+            instantiation of "void cv::dnn::cuda4dnn::kernels::raw::grid_nms<T,NORMALIZED_BBOX,BLOCK_SIZE>(cv::dnn::cuda4dnn::csl::Span<unsigned int>, cv::dnn::cuda4dnn::csl::Span<int>, cv::dnn::cuda4dnn::csl::View<T>, cv::dnn::cuda4dnn::csl::device::size_type, cv::dnn::cuda4dnn::csl::device::index_type, cv::dnn::cuda4dnn::csl::device::size_type, cv::dnn::cuda4dnn::csl::device::size_type, float) [with T=__half, NORMALIZED_BBOX=true, BLOCK_SIZE=128]" at line 434
+            instantiation of "void cv::dnn::cuda4dnn::kernels::grid_nms(const cv::dnn::cuda4dnn::csl::Stream &, cv::dnn::cuda4dnn::csl::Span<unsigned int>, cv::dnn::cuda4dnn::csl::TensorSpan<int>, cv::dnn::cuda4dnn::csl::TensorSpan<int>, cv::dnn::cuda4dnn::csl::TensorView<T>, int, __nv_bool, float) [with T=__half]" at line 464
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/root/opencv/modules/dnn/src/cuda/grid_nms.cu(98): warning #20054-D: dynamic initialization is not supported for a function-scope static __shared__ variable within a __device__/__global__ function
+          __attribute__((shared)) vector_type group_i_boxes[BLOCK_SIZE];
+                                              ^
+          detected during:
+            instantiation of "void cv::dnn::cuda4dnn::kernels::raw::grid_nms<T,NORMALIZED_BBOX,BLOCK_SIZE>(cv::dnn::cuda4dnn::csl::Span<unsigned int>, cv::dnn::cuda4dnn::csl::Span<int>, cv::dnn::cuda4dnn::csl::View<T>, cv::dnn::cuda4dnn::csl::device::size_type, cv::dnn::cuda4dnn::csl::device::index_type, cv::dnn::cuda4dnn::csl::device::size_type, cv::dnn::cuda4dnn::csl::device::size_type, float) [with T=__half, NORMALIZED_BBOX=false, BLOCK_SIZE=128]" at line 439
+            instantiation of "void cv::dnn::cuda4dnn::kernels::grid_nms(const cv::dnn::cuda4dnn::csl::Stream &, cv::dnn::cuda4dnn::csl::Span<unsigned int>, cv::dnn::cuda4dnn::csl::TensorSpan<int>, cv::dnn::cuda4dnn::csl::TensorSpan<int>, cv::dnn::cuda4dnn::csl::TensorView<T>, int, __nv_bool, float) [with T=__half]" at line 464
+
+/root/opencv/modules/dnn/src/cuda/grid_nms.cu(98): warning #20054-D: dynamic initialization is not supported for a function-scope static __shared__ variable within a __device__/__global__ function
+          __attribute__((shared)) vector_type group_i_boxes[BLOCK_SIZE];
+                                              ^
+          detected during:
+            instantiation of "void cv::dnn::cuda4dnn::kernels::raw::grid_nms<T,NORMALIZED_BBOX,BLOCK_SIZE>(cv::dnn::cuda4dnn::csl::Span<unsigned int>, cv::dnn::cuda4dnn::csl::Span<int>, cv::dnn::cuda4dnn::csl::View<T>, cv::dnn::cuda4dnn::csl::device::size_type, cv::dnn::cuda4dnn::csl::device::index_type, cv::dnn::cuda4dnn::csl::device::size_type, cv::dnn::cuda4dnn::csl::device::size_type, float) [with T=float, NORMALIZED_BBOX=true, BLOCK_SIZE=128]" at line 434
+            instantiation of "void cv::dnn::cuda4dnn::kernels::grid_nms(const cv::dnn::cuda4dnn::csl::Stream &, cv::dnn::cuda4dnn::csl::Span<unsigned int>, cv::dnn::cuda4dnn::csl::TensorSpan<int>, cv::dnn::cuda4dnn::csl::TensorSpan<int>, cv::dnn::cuda4dnn::csl::TensorView<T>, int, __nv_bool, float) [with T=float]" at line 465
+
+/root/opencv/modules/dnn/src/cuda/grid_nms.cu(98): warning #20054-D: dynamic initialization is not supported for a function-scope static __shared__ variable within a __device__/__global__ function
+          __attribute__((shared)) vector_type group_i_boxes[BLOCK_SIZE];
+                                              ^
+          detected during:
+            instantiation of "void cv::dnn::cuda4dnn::kernels::raw::grid_nms<T,NORMALIZED_BBOX,BLOCK_SIZE>(cv::dnn::cuda4dnn::csl::Span<unsigned int>, cv::dnn::cuda4dnn::csl::Span<int>, cv::dnn::cuda4dnn::csl::View<T>, cv::dnn::cuda4dnn::csl::device::size_type, cv::dnn::cuda4dnn::csl::device::index_type, cv::dnn::cuda4dnn::csl::device::size_type, cv::dnn::cuda4dnn::csl::device::size_type, float) [with T=float, NORMALIZED_BBOX=false, BLOCK_SIZE=128]" at line 439
+            instantiation of "void cv::dnn::cuda4dnn::kernels::grid_nms(const cv::dnn::cuda4dnn::csl::Stream &, cv::dnn::cuda4dnn::csl::Span<unsigned int>, cv::dnn::cuda4dnn::csl::TensorSpan<int>, cv::dnn::cuda4dnn::csl::TensorSpan<int>, cv::dnn::cuda4dnn::csl::TensorView<T>, int, __nv_bool, float) [with T=float]" at line 465
+
+[ 37%] Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/mser.cpp.o
+[ 37%] Building NVCC (Device) object modules/dnn/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_max_unpooling.cu.o
+[ 37%] Building NVCC (Device) object modules/cudafilters/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_column_filter.32fc1.cu.o
+[ 37%] Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/orb.cpp.o
+[ 37%] Building CXX object modules/features2d/CMakeFiles/opencv_features2d.dir/src/sift.dispatch.cpp.o
+```
+
+encounter the following error:
+
+```
+[ 38%] Built target opencv_fuzzy
+[ 38%] Building NVCC (Device) object modules/hfs/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_magnitude.cu.o
+[ 38%] Building NVCC (Device) object modules/cudafilters/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_column_filter.32fc4.cu.o
+[ 38%] Building NVCC (Device) object modules/hfs/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_gslic_seg_engine_gpu.cu.o
+[ 38%] Building NVCC (Device) object modules/dnn/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_permute.cu.o
+/root/opencv_contrib/modules/hfs/src/cuda/gslic_seg_engine_gpu.cu(190): warning #20054-D: dynamic initialization is not supported for a function-scope static __shared__ variable within a __device__/__global__ function
+      __attribute__((shared)) Float4_ color_shared[16*16];
+                                      ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/root/opencv_contrib/modules/hfs/src/cuda/gslic_seg_engine_gpu.cu(191): warning #20054-D: dynamic initialization is not supported for a function-scope static __shared__ variable within a __device__/__global__ function
+      __attribute__((shared)) Float2_ xy_shared[16*16];
+                                      ^
+
+/root/opencv_contrib/modules/hfs/src/cuda/../or_utils/or_memory_block.hpp: In instantiation of ‘void cv::hfs::orutils::MemoryBlock<T>::clear(unsigned char) [with T = cv::hfs::orutils::Vector4<unsigned char>]’:
+/root/opencv_contrib/modules/hfs/src/cuda/../or_utils/or_memory_block.hpp:42:1:   required from ‘cv::hfs::orutils::MemoryBlock<T>::MemoryBlock(size_t) [with T = cv::hfs::orutils::Vector4<unsigned char>; size_t = long unsigned int]’
+/root/opencv_contrib/modules/hfs/src/cuda/../or_utils/or_image.hpp:18:84:   required from ‘cv::hfs::orutils::Image<T>::Image(cv::hfs::orutils::Vector2<int>) [with T = cv::hfs::orutils::Vector4<unsigned char>]’
+/root/opencv_contrib/modules/hfs/src/cuda/gslic_seg_engine_gpu.cu:43:115:   required from here
+/root/opencv_contrib/modules/hfs/src/cuda/../or_utils/or_memory_block.hpp:47:7: warning: ‘void* memset(void*, int, size_t)’ writing to an object of non-trivial type ‘class cv::hfs::orutils::Vector4<unsigned char>’; use assignment instead [-Wclass-memaccess]
+   47 |         memset(data_cpu, defaultValue, dataSize * sizeof(T));
+      |       ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/opencv_contrib/modules/hfs/src/cuda/../or_utils/or_vector.hpp:63:26: note: ‘class cv::hfs::orutils::Vector4<unsigned char>’ declared here
+   63 | template <class T> class Vector4 : public Vector4_ < T >
+      |                          ^~~~~~~
+/root/opencv_contrib/modules/hfs/src/cuda/../or_utils/or_memory_block.hpp: In instantiation of ‘void cv::hfs::orutils::MemoryBlock<T>::clear(unsigned char) [with T = cv::hfs::orutils::Vector4<float>]’:
+/root/opencv_contrib/modules/hfs/src/cuda/../or_utils/or_memory_block.hpp:42:1:   required from ‘cv::hfs::orutils::MemoryBlock<T>::MemoryBlock(size_t) [with T = cv::hfs::orutils::Vector4<float>; size_t = long unsigned int]’
+/root/opencv_contrib/modules/hfs/src/cuda/../or_utils/or_image.hpp:18:84:   required from ‘cv::hfs::orutils::Image<T>::Image(cv::hfs::orutils::Vector2<int>) [with T = cv::hfs::orutils::Vector4<float>]’
+/root/opencv_contrib/modules/hfs/src/cuda/gslic_seg_engine_gpu.cu:44:104:   required from here
+/root/opencv_contrib/modules/hfs/src/cuda/../or_utils/or_memory_block.hpp:47:7: warning: ‘void* memset(void*, int, size_t)’ writing to an object of non-trivial type ‘class cv::hfs::orutils::Vector4<float>’; use assignment instead [-Wclass-memaccess]
+   47 |         memset(data_cpu, defaultValue, dataSize * sizeof(T));
+      |       ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/opencv_contrib/modules/hfs/src/cuda/../or_utils/or_vector.hpp:63:26: note: ‘class cv::hfs::orutils::Vector4<float>’ declared here
+   63 | template <class T> class Vector4 : public Vector4_ < T >
+      |                          ^~~~~~~
+/root/opencv_contrib/modules/hfs/src/cuda/../or_utils/or_memory_block.hpp: In instantiation of ‘void cv::hfs::orutils::MemoryBlock<T>::clear(unsigned char) [with T = cv::hfs::slic::gSpixelInfo]’:
+/root/opencv_contrib/modules/hfs/src/cuda/../or_utils/or_memory_block.hpp:42:1:   required from ‘cv::hfs::orutils::MemoryBlock<T>::MemoryBlock(size_t) [with T = cv::hfs::slic::gSpixelInfo; size_t = long unsigned int]’
+/root/opencv_contrib/modules/hfs/src/cuda/../or_utils/or_image.hpp:18:84:   required from ‘cv::hfs::orutils::Image<T>::Image(cv::hfs::orutils::Vector2<int>) [with T = cv::hfs::slic::gSpixelInfo]’
+/root/opencv_contrib/modules/hfs/src/cuda/gslic_seg_engine_gpu.cu:54:80:   required from here
+/root/opencv_contrib/modules/hfs/src/cuda/../or_utils/or_memory_block.hpp:47:7: warning: ‘void* memset(void*, int, size_t)’ writing to an object of non-trivial type ‘struct cv::hfs::slic::gSpixelInfo’; use assignment instead [-Wclass-memaccess]
+   47 |         memset(data_cpu, defaultValue, dataSize * sizeof(T));
+      |       ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/opencv_contrib/modules/hfs/src/cuda/../slic/slic.hpp:67:8: note: ‘struct cv::hfs::slic::gSpixelInfo’ declared here
+   67 | struct gSpixelInfo
+      |        ^~~~~~~~~~~
+[ 38%] Building CXX object modules/hfs/CMakeFiles/opencv_hfs.dir/src/hfs.cpp.o
+[ 38%] Building CXX object modules/hfs/CMakeFiles/opencv_hfs.dir/src/hfs_core.cpp.o
+In file included from /root/opencv_contrib/modules/hfs/src/or_utils/or_image.hpp:9,
+                 from /root/opencv_contrib/modules/hfs/src/or_utils/or_types.hpp:9,
+                 from /root/opencv_contrib/modules/hfs/src/precomp.hpp:12,
+                 from /root/opencv_contrib/modules/hfs/src/hfs_core.cpp:5:
+/root/opencv_contrib/modules/hfs/src/or_utils/or_memory_block.hpp: In instantiation of ‘void cv::hfs::orutils::MemoryBlock<T>::clear(unsigned char) [with T = cv::hfs::orutils::Vector4<unsigned char>]’:
+/root/opencv_contrib/modules/hfs/src/or_utils/or_memory_block.hpp:42:9:   required from ‘cv::hfs::orutils::MemoryBlock<T>::MemoryBlock(size_t) [with T = cv::hfs::orutils::Vector4<unsigned char>; size_t = long unsigned int]’
+/root/opencv_contrib/modules/hfs/src/or_utils/or_image.hpp:19:49:   required from ‘cv::hfs::orutils::Image<T>::Image(cv::hfs::orutils::Vector2<int>) [with T = cv::hfs::orutils::Vector4<unsigned char>]’
+/root/opencv_contrib/modules/hfs/src/hfs_core.cpp:66:58:   required from here
+/root/opencv_contrib/modules/hfs/src/or_utils/or_memory_block.hpp:47:15: warning: ‘void* memset(void*, int, size_t)’ writing to an object of non-trivial type ‘class cv::hfs::orutils::Vector4<unsigned char>’; use assignment instead [-Wclass-memaccess]
+   47 |         memset(data_cpu, defaultValue, dataSize * sizeof(T));
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /root/opencv_contrib/modules/hfs/src/or_utils/or_types.hpp:8,
+                 from /root/opencv_contrib/modules/hfs/src/precomp.hpp:12,
+                 from /root/opencv_contrib/modules/hfs/src/hfs_core.cpp:5:
+/root/opencv_contrib/modules/hfs/src/or_utils/or_vector.hpp:63:26: note: ‘class cv::hfs::orutils::Vector4<unsigned char>’ declared here
+   63 | template <class T> class Vector4 : public Vector4_ < T >
+      |                          ^~~~~~~
+[ 38%] Building NVCC (Device) object modules/dnn/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_prior_box.cu.o
+[ 38%] Building CXX object modules/hfs/CMakeFiles/opencv_hfs.dir/src/magnitude/magnitude.cpp.o
+[ 38%] Building CXX object modules/hfs/CMakeFiles/opencv_hfs.dir/src/merge/merge.cpp.o
+[ 38%] Building CXX object modules/hfs/CMakeFiles/opencv_hfs.dir/src/slic/gslic_engine.cpp.o
+[ 39%] Building CXX object modules/hfs/CMakeFiles/opencv_hfs.dir/src/slic/slic.cpp.o
+[ 39%] Building CXX object modules/img_hash/CMakeFiles/opencv_img_hash.dir/src/average_hash.cpp.o
+[ 40%] Building NVCC (Device) object modules/dnn/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_region.cu.o
+[ 40%] Linking CXX shared library ../../lib/libopencv_hfs.so
+[ 40%] Built target opencv_hfs
+```
