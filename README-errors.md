@@ -424,3 +424,109 @@ In file included from /root/opencv_contrib/modules/cudacodec/perf/perf_precomp.h
 [ 65%] Built target opencv_perf_cudacodec
 [ 65%] Building NVCC (Device) object modules/cudafeatures2d/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_orb.cu.o
 ```
+
+another error:
+
+```
+[ 82%] Built target opencv_cudabgsegm
+[ 82%] Building NVCC (Device) object modules/cudalegacy/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_NCVPyramid.cu.o
+[ 82%] Building NVCC (Device) object modules/cudalegacy/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_NPP_staging.cu.o
+[ 82%] Building CXX object modules/ximgproc/CMakeFiles/opencv_ximgproc.dir/src/radon_transform.cpp.o
+[ 82%] Building CXX object modules/ximgproc/CMakeFiles/opencv_ximgproc.dir/src/ridgedetectionfilter.cpp.o
+[ 82%] Building NVCC (Device) object modules/cudalegacy/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_bm.cu.o
+[ 82%] Building CXX object modules/ximgproc/CMakeFiles/opencv_ximgproc.dir/src/rolling_guidance_filter.cpp.o
+[ 82%] Building CXX object modules/ximgproc/CMakeFiles/opencv_ximgproc.dir/src/run_length_morphology.cpp.o
+[ 82%] Building NVCC (Device) object modules/cudalegacy/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_bm_fast.cu.o
+[ 82%] Building CXX object modules/ximgproc/CMakeFiles/opencv_ximgproc.dir/src/scansegment.cpp.o
+[ 83%] Building NVCC (Device) object modules/cudalegacy/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_calib3d.cu.o
+[ 83%] Building NVCC (Device) object modules/cudalegacy/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_ccomponetns.cu.o
+[ 83%] Building CXX object modules/ximgproc/CMakeFiles/opencv_ximgproc.dir/src/seeds.cpp.o
+[ 83%] Building NVCC (Device) object modules/cudalegacy/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_fgd.cu.o
+[ 83%] Building CXX object modules/ximgproc/CMakeFiles/opencv_ximgproc.dir/src/selectivesearchsegmentation.cpp.o
+[ 83%] Building NVCC (Device) object modules/cudalegacy/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_gmg.cu.o
+[ 83%] Building CXX object modules/ximgproc/CMakeFiles/opencv_ximgproc.dir/src/slic.cpp.o
+[ 83%] Building CXX object modules/ximgproc/CMakeFiles/opencv_ximgproc.dir/src/sparse_match_interpolators.cpp.o
+[ 83%] Building CXX object modules/ximgproc/CMakeFiles/opencv_ximgproc.dir/src/structured_edge_detection.cpp.o
+[ 83%] Building CXX object modules/face/CMakeFiles/opencv_face.dir/src/bif.cpp.o
+[ 83%] Building CXX object modules/cudalegacy/CMakeFiles/opencv_cudalegacy.dir/src/NCV.cpp.o
+In file included from /root/opencv_contrib/modules/cudalegacy/src/precomp.hpp:84,
+                 from /root/opencv_contrib/modules/cudalegacy/src/NCV.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+[ 83%] Building CXX object modules/face/CMakeFiles/opencv_face.dir/src/eigen_faces.cpp.o
+[ 83%] Building CXX object modules/ximgproc/CMakeFiles/opencv_ximgproc.dir/src/thinning.cpp.o
+[ 83%] Building CXX object modules/ximgproc/CMakeFiles/opencv_ximgproc.dir/src/weighted_median_filter.cpp.o
+[ 83%] Building CXX object modules/cudalegacy/CMakeFiles/opencv_cudalegacy.dir/src/bm.cpp.o
+In file included from /root/opencv_contrib/modules/cudalegacy/src/precomp.hpp:84,
+                 from /root/opencv_contrib/modules/cudalegacy/src/bm.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+[ 83%] Building CXX object modules/face/CMakeFiles/opencv_face.dir/src/face_alignment.cpp.o
+[ 83%] Building CXX object modules/cudalegacy/CMakeFiles/opencv_cudalegacy.dir/src/bm_fast.cpp.o
+In file included from /root/opencv_contrib/modules/cudalegacy/src/precomp.hpp:84,
+                 from /root/opencv_contrib/modules/cudalegacy/src/bm_fast.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+[ 83%] Building CXX object modules/gapi/CMakeFiles/opencv_gapi.dir/src/api/grunarg.cpp.o
+[ 83%] Building CXX object modules/ximgproc/CMakeFiles/opencv_ximgproc.dir/opencl_kernels_ximgproc.cpp.o
+[ 83%] Building CXX object modules/cudalegacy/CMakeFiles/opencv_cudalegacy.dir/src/calib3d.cpp.o
+[ 83%] Linking CXX shared library ../../lib/libopencv_ximgproc.so
+In file included from /root/opencv_contrib/modules/cudalegacy/src/precomp.hpp:84,
+                 from /root/opencv_contrib/modules/cudalegacy/src/calib3d.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+[ 83%] Built target opencv_ximgproc
+[ 83%] Building CXX object modules/cudalegacy/CMakeFiles/opencv_cudalegacy.dir/src/fgd.cpp.o
+[ 83%] Building CXX object modules/face/CMakeFiles/opencv_face.dir/src/face_basic.cpp.o
+In file included from /root/opencv_contrib/modules/cudalegacy/src/precomp.hpp:84,
+                 from /root/opencv_contrib/modules/cudalegacy/src/fgd.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+[ 83%] Building CXX object modules/gapi/CMakeFiles/opencv_gapi.dir/src/api/gorigin.cpp.o
+[ 83%] Building CXX object modules/cudalegacy/CMakeFiles/opencv_cudalegacy.dir/src/gmg.cpp.o
+In file included from /root/opencv_contrib/modules/cudalegacy/src/precomp.hpp:84,
+                 from /root/opencv_contrib/modules/cudalegacy/src/gmg.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+[ 83%] Building CXX object modules/cudalegacy/CMakeFiles/opencv_cudalegacy.dir/src/graphcuts.cpp.o
+[ 83%] Building CXX object modules/gapi/CMakeFiles/opencv_gapi.dir/src/api/gmat.cpp.o
+In file included from /root/opencv_contrib/modules/cudalegacy/src/precomp.hpp:84,
+                 from /root/opencv_contrib/modules/cudalegacy/src/graphcuts.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+[ 83%] Building CXX object modules/face/CMakeFiles/opencv_face.dir/src/facemark.cpp.o
+[ 83%] Building CXX object modules/gapi/CMakeFiles/opencv_gapi.dir/src/api/garray.cpp.o
+[ 83%] Building CXX object modules/cudalegacy/CMakeFiles/opencv_cudalegacy.dir/src/image_pyramid.cpp.o
+In file included from /root/opencv_contrib/modules/cudalegacy/src/precomp.hpp:84,
+                 from /root/opencv_contrib/modules/cudalegacy/src/image_pyramid.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+[ 83%] Building CXX object modules/gapi/CMakeFiles/opencv_gapi.dir/src/api/gopaque.cpp.o
+[ 83%] Building CXX object modules/cudalegacy/CMakeFiles/opencv_cudalegacy.dir/src/interpolate_frames.cpp.o
+In file included from /root/opencv_contrib/modules/cudalegacy/src/precomp.hpp:84,
+                 from /root/opencv_contrib/modules/cudalegacy/src/interpolate_frames.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+[ 83%] Building CXX object modules/cudalegacy/CMakeFiles/opencv_cudalegacy.dir/src/needle_map.cpp.o
+[ 83%] Building CXX object modules/face/CMakeFiles/opencv_face.dir/src/facemarkAAM.cpp.o
+In file included from /root/opencv_contrib/modules/cudalegacy/src/precomp.hpp:84,
+                 from /root/opencv_contrib/modules/cudalegacy/src/needle_map.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+[ 83%] Building CXX object modules/gapi/CMakeFiles/opencv_gapi.dir/src/api/gscalar.cpp.o
+[ 83%] Building CXX object modules/gapi/CMakeFiles/opencv_gapi.dir/src/api/gframe.cpp.o
+[ 83%] Linking CXX shared library ../../lib/libopencv_cudalegacy.so
+[ 83%] Built target opencv_cudalegacy
+[ 83%] Building CXX object modules/gapi/CMakeFiles/opencv_gapi.dir/src/api/gkernel.cpp.o
+[ 83%] Processing OpenCL kernels (tracking)
+```
