@@ -40,7 +40,7 @@ $ ./OpenCV-4-10-0.sh
 
 ------------
 
-If you want to beautify OpenCV with the Qt5 GUI, you need to
+If you want to beautify OpenCV with the Qt5 GUI, you need to 👈 [kairin note] - qt5-default has been dropped from debian due to being outdated.
 - $ sudo apt-get install qt5-default
 - Set the -D WITH_QT=**ON** \ (± line 62) in the script<br/>
  
