@@ -400,3 +400,27 @@ another error:
 [ 57%] Building CXX object modules/xfeatures2d/CMakeFiles/opencv_xfeatures2d.dir/src/boostdesc.cpp.o
 [ 57%] Built target opencv_dnn
 ```
+
+
+```
+[ 65%] Built target opencv_text
+[ 65%] Building CXX object modules/cudacodec/CMakeFiles/opencv_perf_cudacodec.dir/perf/perf_main.cpp.o
+[ 65%] Linking CXX executable ../../bin/opencv_perf_calib3d
+In file included from /root/opencv_contrib/modules/cudacodec/perf/perf_precomp.hpp:48,
+                 from /root/opencv_contrib/modules/cudacodec/perf/perf_main.cpp:43:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 65%] Built target opencv_perf_calib3d
+[ 65%] Building CXX object modules/cudacodec/CMakeFiles/opencv_perf_cudacodec.dir/perf/perf_video.cpp.o
+[ 65%] Building CXX object modules/cudaimgproc/CMakeFiles/opencv_cudaimgproc.dir/src/connectedcomponents.cpp.o
+[ 65%] Building CXX object modules/cudaimgproc/CMakeFiles/opencv_cudaimgproc.dir/src/corners.cpp.o
+In file included from /root/opencv_contrib/modules/cudacodec/perf/perf_precomp.hpp:48,
+                 from /root/opencv_contrib/modules/cudacodec/perf/perf_video.cpp:43:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 65%] Linking CXX executable ../../bin/opencv_perf_cudacodec
+[ 65%] Built target opencv_perf_cudacodec
+[ 65%] Building NVCC (Device) object modules/cudafeatures2d/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_orb.cu.o
+```
