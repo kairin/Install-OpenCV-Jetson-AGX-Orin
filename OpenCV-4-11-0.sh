@@ -13,7 +13,7 @@ install_opencv () {
 	  # Use always "-j 4"
           NO_JOB=4
           ARCH=8.7
-          PTX="sm_87"
+          PTX="sm_87" #kairin - since agx orin is indicated as placed as compute capability no changes here.
       #elif [[ $model == *"Jetson Nano"* ]]; then
       #    echo "Detecting a regular Jetson Nano."
       #    ARCH=5.3
