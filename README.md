@@ -224,3 +224,207 @@ In file included from /root/opencv_contrib/modules/hfs/src/or_utils/or_types.hpp
 [ 40%] Linking CXX shared library ../../lib/libopencv_hfs.so
 [ 40%] Built target opencv_hfs
 ```
+encountered the following error:
+
+```
+[ 46%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/concat_layer.cpp.o
+[ 46%] Building CXX object modules/calib3d/CMakeFiles/opencv_calib3d.dir/src/upnp.cpp.o
+[ 46%] Linking CXX shared library ../../lib/libopencv_videoio.so
+/root/opencv_contrib/modules/cudafilters/src/cuda/wavelet_matrix_2d.cuh(451): warning #2912-D: constexpr if statements are a C++17 feature
+                  if constexpr(CH_NUM > 1) {
+                     ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+[ 46%] Built target opencv_videoio
+[ 46%] Building CXX object modules/calib3d/CMakeFiles/opencv_calib3d.dir/src/usac/bundle.cpp.o
+[ 46%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/const_layer.cpp.o
+[ 46%] Building CXX object modules/highgui/CMakeFiles/opencv_highgui.dir/src/backend.cpp.o
+[ 46%] Building CXX object modules/calib3d/CMakeFiles/opencv_calib3d.dir/src/usac/degeneracy.cpp.o
+[ 46%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/convolution_layer.cpp.o
+/root/opencv_contrib/modules/cudafilters/src/cuda/wavelet_matrix_float_supporter.cuh(81): warning #2912-D: constexpr if statements are a C++17 feature
+      if constexpr (CH_NUM >= 2) {
+         ^
+          detected during:
+            instantiation of "void cv::cuda::device::wavelet_matrix_median::WMMedianFloatSupporter::WMMedianFloatSupporter<ValT, CH_NUM, IdxT>::sort_and_set(IdxT *, IdxT) [with ValT=float, CH_NUM=1, IdxT=uint32_t]" at line 381 of /root/opencv_contrib/modules/cudafilters/src/cuda/median_filter.cu
+            instantiation of "void cv::cuda::device::medianFiltering_wavelet_matrix_gpu<CH_NUM,T>(cv::cuda::PtrStepSz<T>, cv::cuda::PtrStepSz<T>, int, cudaStream_t) [with CH_NUM=1, T=unsigned char]" at line 400 of /root/opencv_contrib/modules/cudafilters/src/cuda/median_filter.cu
+            instantiation of "void cv::cuda::device::medianFiltering_wavelet_matrix_gpu(cv::cuda::PtrStepSz<T>, cv::cuda::PtrStepSz<T>, int, int, cudaStream_t) [with T=unsigned char]" at line 410 of /root/opencv_contrib/modules/cudafilters/src/cuda/median_filter.cu
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+[ 46%] Building CXX object modules/highgui/CMakeFiles/opencv_highgui.dir/src/window.cpp.o
+[ 46%] Building CXX object modules/calib3d/CMakeFiles/opencv_calib3d.dir/src/usac/dls_solver.cpp.o
+[ 46%] Building CXX object modules/highgui/CMakeFiles/opencv_highgui.dir/src/roiSelector.cpp.o
+[ 46%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/correlation_layer.cpp.o
+[ 46%] Building CXX object modules/highgui/CMakeFiles/opencv_highgui.dir/src/window_gtk.cpp.o
+[ 46%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/cpu_kernels/conv_depthwise.cpp.o
+[ 46%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/cpu_kernels/conv_winograd_f63.cpp.o
+[ 46%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/cpu_kernels/conv_winograd_f63.dispatch.cpp.o
+[ 46%] Linking CXX shared library ../../lib/libopencv_highgui.so
+[ 46%] Built target opencv_highgui
+[ 46%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/cpu_kernels/convolution.cpp.o
+[ 46%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/cpu_kernels/fast_gemm.cpp.o
+[ 46%] Building CXX object modules/calib3d/CMakeFiles/opencv_calib3d.dir/src/usac/essential_solver.cpp.o
+[ 46%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/cpu_kernels/fast_norm.cpp.o
+/root/opencv_contrib/modules/cudafilters/src/cuda/wavelet_matrix_2d.cuh: In member function ‘void cv::cuda::device::wavelet_matrix_median::WaveletMatrix2dCu5C<ValT, CH_NUM, MultiWaveletMatrixImpl, TH_NUM, WORD_SIZE>::construct(const ValT*, cudaStream_t, bool)’:
+/root/opencv_contrib/modules/cudafilters/src/cuda/wavelet_matrix_2d.cuh:885:4: warning: ‘if constexpr’ only available with ‘-std=c++17’ or ‘-std=gnu++17’
+  885 |         if constexpr (sizeof(ValT) >= 4) for (; h > 16; --h) {
+      |    ^    ~~~~
+/root/opencv_contrib/modules/cudafilters/src/cuda/wavelet_matrix_2d.cuh:903:4: warning: ‘if constexpr’ only available with ‘-std=c++17’ or ‘-std=gnu++17’
+  903 |         if constexpr (sizeof(ValT) >= 4) if (h == 16 || (is_same<ValT, uint32_t>::value && h >= 0)) do {
+      |    ^    ~~~~
+/root/opencv_contrib/modules/cudafilters/src/cuda/wavelet_matrix_2d.cuh:922:4: warning: ‘if constexpr’ only available with ‘-std=c++17’ or ‘-std=gnu++17’
+  922 |         if constexpr (sizeof(ValT) >= 2) for (; h > 8; --h) {
+      |    ^    ~~~~
+/root/opencv_contrib/modules/cudafilters/src/cuda/wavelet_matrix_2d.cuh:940:4: warning: ‘if constexpr’ only available with ‘-std=c++17’ or ‘-std=gnu++17’
+  940 |         if constexpr (sizeof(ValT) >= 2) if (h == 8 || (is_same<ValT, uint32_t>::value && h >= 0)) do {
+      |    ^    ~~~~
+[ 46%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/cpu_kernels/softmax.cpp.o
+[ 46%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/crop_and_resize_layer.cpp.o
+[ 46%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/cumsum_layer.cpp.o
+[ 46%] Building CXX object modules/calib3d/CMakeFiles/opencv_calib3d.dir/src/usac/estimator.cpp.o
+[ 46%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/depth_space_ops_layer.cpp.o
+[ 46%] Building NVCC (Device) object modules/cudafilters/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_row_filter.16sc1.cu.o
+```
+another error:
+
+```
+[ 47%] Building NVCC (Device) object modules/cudacodec/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_ColorSpace.cu.o
+[ 47%] Building CXX object modules/calib3d/CMakeFiles/opencv_calib3d.dir/src/usac/ransac_solvers.cpp.o
+[ 47%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/fully_connected_layer.cpp.o
+/root/opencv_contrib/modules/cudacodec/src/cuda/ColorSpace.cu(163): warning #497-D: declaration of "Color" hides template parameter
+          Color Color[2];
+                ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/root/opencv_contrib/modules/cudacodec/src/cuda/ColorSpace.cu(217): warning #497-D: declaration of "Color" hides template parameter
+          Color Color[2];
+                ^
+
+/root/opencv_contrib/modules/cudacodec/src/cuda/ColorSpace.cu(163): warning #497-D: declaration of "Color" hides template parameter
+          Color Color[2];
+                ^
+          detected during instantiation of "void cv::cuda::device::Nv12ToColor24<COLOR24>(uint8_t *, int, uint8_t *, int, int, int, __nv_bool, cudaStream_t) [with COLOR24=cv::cuda::device::BGR24]" at line 691
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+/root/opencv_contrib/modules/cudacodec/src/cuda/ColorSpace.cu(217): warning #497-D: declaration of "Color" hides template parameter
+          Color Color[2];
+                ^
+          detected during instantiation of "void cv::cuda::device::YUV444ToColor24<COLOR24>(uint8_t *, int, uint8_t *, int, int, int, __nv_bool, cudaStream_t) [with COLOR24=cv::cuda::device::BGR24]" at line 727
+
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:44: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                                            ^~~                      
+/root/opencv_contrib/modules/cudacodec/src/cuda/ColorSpace.cu:52:6: warning: no previous declaration for ‘void cv::cuda::device::SetMatYuv2Rgb(int, bool)’ [-Wmissing-declarations]
+   52 | void SetMatYuv2Rgb(int iMatrix, bool fullRange = false) {
+      |      ^~~~~~~~~~~~~
+/root/opencv_contrib/modules/cudacodec/src/cuda/ColorSpace.cu:371:6: warning: no previous declaration for ‘void cv::cuda::device::Y8ToGray8(uint8_t*, int, uint8_t*, int, int, int, bool, cudaStream_t)’ [-Wmissing-declarations]
+  371 | void Y8ToGray8(uint8_t* dpY8, int nY8Pitch, uint8_t* dpGray, int nGrayPitch, int nWidth, int nHeight, bool videoFullRangeFlag, const cudaStream_t stream) {
+      |      ^~~~~~~~~
+/root/opencv_contrib/modules/cudacodec/src/cuda/ColorSpace.cu:379:6: warning: no previous declaration for ‘void cv::cuda::device::Y8ToGray16(uint8_t*, int, uint8_t*, int, int, int, bool, cudaStream_t)’ [-Wmissing-declarations]
+  379 | void Y8ToGray16(uint8_t* dpY8, int nY8Pitch, uint8_t* dpGray, int nGrayPitch, int nWidth, int nHeight, bool videoFullRangeFlag, const cudaStream_t stream) {
+      |      ^~~~~~~~~~
+/root/opencv_contrib/modules/cudacodec/src/cuda/ColorSpace.cu:387:6: warning: no previous declaration for ‘void cv::cuda::device::Y16ToGray8(uint8_t*, int, uint8_t*, int, int, int, bool, cudaStream_t)’ [-Wmissing-declarations]
+  387 | void Y16ToGray8(uint8_t* dpY16, int nY16Pitch, uint8_t* dpGray, int nGrayPitch, int nWidth, int nHeight, bool videoFullRangeFlag, const cudaStream_t stream) {
+      |      ^~~~~~~~~~
+/root/opencv_contrib/modules/cudacodec/src/cuda/ColorSpace.cu:395:6: warning: no previous declaration for ‘void cv::cuda::device::Y16ToGray16(uint8_t*, int, uint8_t*, int, int, int, bool, cudaStream_t)’ [-Wmissing-declarations]
+  395 | void Y16ToGray16(uint8_t* dpY16, int nY16Pitch, uint8_t* dpGray, int nGrayPitch, int nWidth, int nHeight, bool videoFullRangeFlag, const cudaStream_t stream) {
+      |      ^~~~~~~~~~~
+[ 47%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/gather_elements_layer.cpp.o
+[ 47%] Building CXX object modules/calib3d/CMakeFiles/opencv_calib3d.dir/src/usac/sampler.cpp.o
+[ 47%] Building CXX object modules/cudacodec/CMakeFiles/opencv_cudacodec.dir/src/NvEncoder.cpp.o
+In file included from /root/opencv_contrib/modules/cudacodec/src/precomp.hpp:54,
+                 from /root/opencv_contrib/modules/cudacodec/src/NvEncoder.cpp:4:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 47%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/gather_layer.cpp.o
+[ 47%] Building CXX object modules/cudacodec/CMakeFiles/opencv_cudacodec.dir/src/NvEncoderCuda.cpp.o
+In file included from /root/opencv_contrib/modules/cudacodec/src/precomp.hpp:54,
+                 from /root/opencv_contrib/modules/cudacodec/src/NvEncoderCuda.cpp:4:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 47%] Building CXX object modules/calib3d/CMakeFiles/opencv_calib3d.dir/src/usac/termination.cpp.o
+[ 47%] Building CXX object modules/cudacodec/CMakeFiles/opencv_cudacodec.dir/src/cuvid_video_source.cpp.o
+[ 47%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/gemm_layer.cpp.o
+In file included from /root/opencv_contrib/modules/cudacodec/src/precomp.hpp:54,
+                 from /root/opencv_contrib/modules/cudacodec/src/cuvid_video_source.cpp:44:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 47%] Building CXX object modules/cudacodec/CMakeFiles/opencv_cudacodec.dir/src/ffmpeg_video_source.cpp.o
+[ 47%] Building CXX object modules/calib3d/CMakeFiles/opencv_calib3d.dir/src/usac/utils.cpp.o
+In file included from /root/opencv_contrib/modules/cudacodec/src/precomp.hpp:54,
+                 from /root/opencv_contrib/modules/cudacodec/src/ffmpeg_video_source.cpp:44:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 47%] Building CXX object modules/cudacodec/CMakeFiles/opencv_cudacodec.dir/src/frame_queue.cpp.o
+In file included from /root/opencv_contrib/modules/cudacodec/src/precomp.hpp:54,
+                 from /root/opencv_contrib/modules/cudacodec/src/frame_queue.cpp:44:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 47%] Building CXX object modules/cudacodec/CMakeFiles/opencv_cudacodec.dir/src/nvidia_surface_format_to_color_converter.cpp.o
+[ 47%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/group_norm_layer.cpp.o
+In file included from /root/opencv_contrib/modules/cudacodec/src/precomp.hpp:54,
+                 from /root/opencv_contrib/modules/cudacodec/src/nvidia_surface_format_to_color_converter.cpp:5:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+/root/opencv_contrib/modules/cudacodec/src/nvidia_surface_format_to_color_converter.cpp:97:7: warning: base class ‘class cv::cudacodec::NVSurfaceToColorConverter’ has accessible non-virtual destructor [-Wnon-virtual-dtor]
+   97 | class NVSurfaceToColorConverterImpl : public NVSurfaceToColorConverter {
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/opencv_contrib/modules/cudacodec/src/nvidia_surface_format_to_color_converter.cpp:97:7: warning: ‘class NVSurfaceToColorConverterImpl’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+[ 47%] Building CXX object modules/cudacodec/CMakeFiles/opencv_cudacodec.dir/src/thread.cpp.o
+[ 47%] Building CXX object modules/calib3d/CMakeFiles/opencv_calib3d.dir/opencl_kernels_calib3d.cpp.o
+In file included from /root/opencv_contrib/modules/cudacodec/src/precomp.hpp:54,
+                 from /root/opencv_contrib/modules/cudacodec/src/thread.cpp:44:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 47%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/instance_norm_layer.cpp.o
+[ 47%] Building CXX object modules/cudacodec/CMakeFiles/opencv_cudacodec.dir/src/video_decoder.cpp.o
+[ 47%] Linking CXX shared library ../../lib/libopencv_calib3d.so
+[ 47%] Built target opencv_calib3d
+[ 47%] Building CXX object modules/cudacodec/CMakeFiles/opencv_cudacodec.dir/src/video_parser.cpp.o
+[ 47%] Building NVCC (Device) object modules/cudafilters/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_row_filter.16sc4.cu.o
+In file included from /root/opencv_contrib/modules/cudacodec/src/precomp.hpp:54,
+                 from /root/opencv_contrib/modules/cudacodec/src/video_decoder.cpp:44:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 47%] Building CXX object modules/cudacodec/CMakeFiles/opencv_cudacodec.dir/src/video_reader.cpp.o
+In file included from /root/opencv_contrib/modules/cudacodec/src/precomp.hpp:54,
+                 from /root/opencv_contrib/modules/cudacodec/src/video_parser.cpp:44:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 47%] Building CXX object modules/cudacodec/CMakeFiles/opencv_cudacodec.dir/src/video_source.cpp.o
+In file included from /root/opencv_contrib/modules/cudacodec/src/precomp.hpp:54,
+                 from /root/opencv_contrib/modules/cudacodec/src/video_reader.cpp:43:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 47%] Building CXX object modules/dnn/CMakeFiles/opencv_dnn.dir/src/layers/layer_norm.cpp.o
+[ 48%] Building CXX object modules/cudacodec/CMakeFiles/opencv_cudacodec.dir/src/video_writer.cpp.o
+In file included from /root/opencv_contrib/modules/cudacodec/src/precomp.hpp:54,
+                 from /root/opencv_contrib/modules/cudacodec/src/video_source.cpp:44:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 48%] Processing OpenCL kernels (bioinspired)
+[ 48%] Building CXX object modules/bioinspired/CMakeFiles/opencv_bioinspired.dir/src/basicretinafilter.cpp.o
+In file included from /root/opencv_contrib/modules/cudacodec/src/precomp.hpp:54,
+                 from /root/opencv_contrib/modules/cudacodec/src/video_writer.cpp:44:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 48%] Linking CXX shared library ../../lib/libopencv_cudacodec.so
+[ 48%] Built target opencv_cudacodec
+```
+
+
