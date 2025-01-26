@@ -530,3 +530,40 @@ In file included from /root/opencv_contrib/modules/cudalegacy/src/precomp.hpp:84
 [ 83%] Building CXX object modules/gapi/CMakeFiles/opencv_gapi.dir/src/api/gkernel.cpp.o
 [ 83%] Processing OpenCL kernels (tracking)
 ```
+another error
+
+```
+[ 89%] Built target opencv_perf_cudalegacy
+[ 89%] Building NVCC (Device) object modules/cudaobjdetect/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_lbp.cu.o
+[ 90%] Building CXX object modules/ximgproc/CMakeFiles/opencv_perf_ximgproc.dir/perf/perf_radon_transform.cpp.o
+[ 90%] Building CXX object modules/ximgproc/CMakeFiles/opencv_perf_ximgproc.dir/perf/perf_ridge_detection_filter.cpp.o
+[ 90%] Building CXX object modules/gapi/CMakeFiles/opencv_gapi.dir/src/executor/gtbbexecutor.cpp.o
+[ 90%] Building NVCC (Device) object modules/cudaobjdetect/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_hog.cu.o
+[ 90%] Building CXX object modules/gapi/CMakeFiles/opencv_gapi.dir/src/executor/gthreadedexecutor.cpp.o
+[ 90%] Processing OpenCL kernels (optflow)
+[ 90%] Building CXX object modules/optflow/CMakeFiles/opencv_optflow.dir/src/deepflow.cpp.o
+[ 90%] Building CXX object modules/ximgproc/CMakeFiles/opencv_perf_ximgproc.dir/perf/perf_rolling_guidance_filter.cpp.o
+[ 90%] Building CXX object modules/optflow/CMakeFiles/opencv_optflow.dir/src/interfaces.cpp.o
+[ 90%] Building CXX object modules/ximgproc/CMakeFiles/opencv_perf_ximgproc.dir/perf/perf_run_length_morphology.cpp.o
+[ 90%] Building CXX object modules/optflow/CMakeFiles/opencv_optflow.dir/src/motempl.cpp.o
+[ 90%] Building CXX object modules/gapi/CMakeFiles/opencv_gapi.dir/src/executor/gstreamingexecutor.cpp.o
+[ 90%] Building CXX object modules/cudaobjdetect/CMakeFiles/opencv_cudaobjdetect.dir/src/cascadeclassifier.cpp.o
+In file included from /root/opencv_contrib/modules/cudaobjdetect/src/precomp.hpp:59,
+                 from /root/opencv_contrib/modules/cudaobjdetect/src/cascadeclassifier.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+[ 90%] Building CXX object modules/optflow/CMakeFiles/opencv_optflow.dir/src/pcaflow.cpp.o
+[ 90%] Building CXX object modules/ximgproc/CMakeFiles/opencv_perf_ximgproc.dir/perf/perf_thining.cpp.o
+[ 90%] Building CXX object modules/cudaobjdetect/CMakeFiles/opencv_cudaobjdetect.dir/src/hog.cpp.o
+[ 90%] Building CXX object modules/optflow/CMakeFiles/opencv_optflow.dir/src/rlof/geo_interpolation.cpp.o
+In file included from /root/opencv_contrib/modules/cudaobjdetect/src/precomp.hpp:59,
+                 from /root/opencv_contrib/modules/cudaobjdetect/src/hog.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+[ 90%] Building CXX object modules/ximgproc/CMakeFiles/opencv_perf_ximgproc.dir/perf/perf_weighted_median_filter.cpp.o
+[ 90%] Linking CXX shared library ../../lib/libopencv_cudaobjdetect.so
+[ 90%] Built target opencv_cudaobjdetect
+[ 90%] Processing OpenCL kernels (stitching)
+```
