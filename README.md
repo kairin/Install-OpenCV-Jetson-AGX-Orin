@@ -61,5 +61,5 @@ OpenCV will be installed in the `/usr` directory, all files will be copied to th
 in the install file, the sm_5.3 is in reference to the compute capability. i took a long time to figure out what it is referring to.
 referencing to this https://forums.developer.nvidia.com/t/where-can-i-find-these-numbers-in-cuda-arch-bin/283328 and reading up on this https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-capability where you can find the info in screenshot here https://developer.nvidia.com/cuda-gpus
 
-view errors encountered:
+view errors encountered:  [ERRORS](https://github.com/kairin/Install-OpenCV-Jetson-AGX-Orin/blob/main/README-errors.md)
 
