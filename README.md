@@ -32,7 +32,7 @@ It would be best if you had more memory allocated to your Nano for the fast 4-co
 # or only 1 core is used for the compilation.
 $ free -m
 
-$ wget https://github.com/Qengineering/Install-OpenCV-Jetson-Nano/raw/main/OpenCV-4-10-0.sh
+$ wget https://github.com/Qengineering/Install-OpenCV-Jetson-Nano/raw/main/OpenCV-4-10-0.sh  --change to this repo's file location instead.
 $ sudo chmod 755 ./OpenCV-4-10-0.sh
 $ ./OpenCV-4-10-0.sh
 ```
