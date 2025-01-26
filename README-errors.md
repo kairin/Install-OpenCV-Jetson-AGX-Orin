@@ -687,3 +687,242 @@ In file included from /root/opencv/build/modules/python_bindings_generator/pyope
 [100%] Linking CXX executable ../../bin/opencv_perf_superres
 [100%] Built target opencv_perf_superres
 ```
+
+and some more info about the errors:
+
+```
+[100%] Built target opencv_perf_superres
+[100%] Linking CXX shared module ../../lib/python3/cv2.cpython-310-aarch64-linux-gnu.so
+[100%] Built target opencv_python3
+CMake Deprecation Warning at CMakeLists.txt:25 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Detected processor: aarch64
+-- Looking for ccache - not found
+-- WARNING: Option ENABLE_NEON='ON' is deprecated and should not be used anymore
+--          Behaviour of this option is not backward compatible
+--          Refer to 'CPU_BASELINE'/'CPU_DISPATCH' CMake options documentation
+-- Could NOT find AVIF (missing: AVIF_LIBRARY AVIF_INCLUDE_DIR) 
+Cleaning INTERNAL cached variable: WEBP_LIBRARY
+Cleaning INTERNAL cached variable: WEBP_INCLUDE_DIR
+-- Could NOT find OpenJPEG (minimal suitable version: 2.0, recommended version >= 2.3.1). OpenJPEG will be built from sources
+-- OpenJPEG: VERSION = 2.5.0, BUILD = opencv-4.12.0-dev-openjp2-2.5.0
+-- OpenJPEG libraries will be built from sources: libopenjp2 (version "2.5.0")
+-- NVCUVID: Header not found, WITH_NVCUVID requires Nvidia decoding library header /usr/local/cuda;/usr/local/cuda/include/nvcuvid.h
+-- NVCUVENC: Header not found, WITH_NVCUVENC requires Nvidia encoding library header /usr/local/cuda;/usr/local/cuda/include/nvEncodeAPI.h
+-- CUDA detected: 12.6
+-- CUDA: Using CUDA_ARCH_BIN=8.7
+-- CUDA: NVCC target flags -gencode;arch=compute_87,code=sm_87;-D_FORCE_INLINES;-gencode;arch=compute_87,code=compute_87
+-- LAPACK(Atlas): LAPACK_LIBRARIES: /usr/lib/aarch64-linux-gnu/liblapack.so;/usr/lib/aarch64-linux-gnu/libcblas.so;/usr/lib/aarch64-linux-gnu/libatlas.so
+-- LAPACK(Atlas): Support is enabled.
+-- Could NOT find Java (missing: Java_JAVA_EXECUTABLE Java_JAR_EXECUTABLE Java_JAVAC_EXECUTABLE Java_JAVAH_EXECUTABLE Java_JAVADOC_EXECUTABLE) 
+-- Could NOT find JNI (missing: JAVA_INCLUDE_PATH JAVA_INCLUDE_PATH2 AWT JVM) 
+-- VTK is not found. Please set -DVTK_DIR in CMake to VTK build directory, or to VTK install subdirectory with VTKConfig.cmake file
+CMake Deprecation Warning at 3rdparty/carotene/hal/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at 3rdparty/carotene/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Checking for module 'libavresample'
+--   No package 'libavresample' found
+-- freetype2:   YES (ver 24.1.18)
+-- harfbuzz:    YES (ver 2.7.4)
+-- Julia not found. Not compiling Julia Bindings. 
+-- Module opencv_ovis disabled because OGRE3D was not found
+-- CERES support is disabled. Ceres Solver for reconstruction API is required.
+-- Tesseract:   YES (ver 4.1.1)
+-- Allocator metrics storage type: 'int'
+-- Excluding from source files list: modules/imgproc/src/corner.avx.cpp
+-- Excluding from source files list: modules/imgproc/src/imgwarp.avx2.cpp
+-- Excluding from source files list: modules/imgproc/src/imgwarp.lasx.cpp
+-- Excluding from source files list: modules/imgproc/src/imgwarp.sse4_1.cpp
+-- Excluding from source files list: modules/imgproc/src/resize.avx2.cpp
+-- Excluding from source files list: modules/imgproc/src/resize.lasx.cpp
+-- Excluding from source files list: modules/imgproc/src/resize.sse4_1.cpp
+-- Registering hook 'INIT_MODULE_SOURCES_opencv_dnn': /root/opencv/modules/dnn/cmake/hooks/INIT_MODULE_SOURCES_opencv_dnn.cmake
+-- opencv_dnn: filter out ocl4dnn source code
+-- Excluding from source files list: <BUILD>/modules/dnn/layers/layers_common.avx.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/layers/layers_common.avx2.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/layers/layers_common.avx512_skx.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/layers/layers_common.rvv.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/layers/layers_common.lasx.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/int8layers/layers_common.avx2.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/int8layers/layers_common.avx512_skx.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/int8layers/layers_common.rvv.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/int8layers/layers_common.lasx.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/layers/cpu_kernels/conv_block.avx.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/layers/cpu_kernels/conv_block.avx2.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/layers/cpu_kernels/conv_depthwise.avx.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/layers/cpu_kernels/conv_depthwise.avx2.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/layers/cpu_kernels/conv_depthwise.rvv.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/layers/cpu_kernels/conv_depthwise.lasx.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/layers/cpu_kernels/fast_gemm_kernels.avx.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/layers/cpu_kernels/fast_gemm_kernels.avx2.cpp
+-- Excluding from source files list: <BUILD>/modules/dnn/layers/cpu_kernels/fast_gemm_kernels.lasx.cpp
+-- Excluding from source files list: modules/features2d/src/fast.avx2.cpp
+-- imgcodecs: OpenEXR codec is disabled in runtime. Details: https://github.com/opencv/opencv/issues/21326
+CMake Warning at /root/opencv_contrib/modules/cudacodec/CMakeLists.txt:26 (message):
+  cudacodec::VideoReader requires Nvidia Video Codec SDK.  Please resolve
+  dependency or disable WITH_NVCUVID=OFF
+
+
+CMake Warning at /root/opencv_contrib/modules/cudacodec/CMakeLists.txt:30 (message):
+  cudacodec::VideoWriter requires Nvidia Video Codec SDK.  Please resolve
+  dependency or disable WITH_NVCUVENC=OFF
+
+
+-- highgui: using builtin backend: GTK3
+-- Use autogenerated whitelist /root/opencv/build/modules/js_bindings_generator/whitelist.json
+-- CERES support is disabled. Ceres Solver for reconstruction API is required.
+-- Building with NVIDIA Optical Flow API 2.0
+-- Found 'misc' Python modules from /root/opencv/modules/python/package/extra_modules
+-- Found 'mat_wrapper;utils' Python modules from /root/opencv/modules/core/misc/python/package
+-- Found 'gapi' Python modules from /root/opencv/modules/gapi/misc/python/package
+-- Found 'misc' Python modules from /root/opencv/modules/python/package/extra_modules
+-- Found 'mat_wrapper;utils' Python modules from /root/opencv/modules/core/misc/python/package
+-- Found 'gapi' Python modules from /root/opencv/modules/gapi/misc/python/package
+CMake Warning at cmake/OpenCVGenSetupVars.cmake:54 (message):
+  CONFIGURATION IS NOT SUPPORTED: validate setupvars script in install
+  directory
+Call Stack (most recent call first):
+  CMakeLists.txt:1182 (include)
+
+
+-- 
+-- General configuration for OpenCV 4.12.0-dev =====================================
+--   Version control:               4b2a33a
+-- 
+--   Extra modules:
+--     Location (extra):            /root/opencv_contrib/modules
+--     Version control (extra):     2af5458
+-- 
+--   Platform:
+--     Timestamp:                   2025-01-26T21:40:50Z
+--     Host:                        Linux 5.15.148-tegra aarch64
+--     CMake:                       3.31.4
+--     CMake generator:             Unix Makefiles
+--     CMake build tool:            /usr/bin/gmake
+--     Configuration:               RELEASE
+--     Algorithm Hint:              ALGO_HINT_ACCURATE
+-- 
+--   CPU/HW features:
+--     Baseline:                    NEON FP16 NEON_DOTPROD NEON_FP16
+--       requested:                 DETECT
+--       required:                  NEON
+--     Dispatched code generation:  NEON_BF16
+--       requested:                 NEON_FP16 NEON_BF16 NEON_DOTPROD
+--       NEON_BF16 (0 files):       + NEON_BF16
+-- 
+--   C/C++:
+--     Built as dynamic libs?:      YES
+--     C++ standard:                11
+--     C++ Compiler:                /usr/bin/c++  (ver 11.4.0)
+--     C++ flags (Release):         -march=native -mtune=native   -fsigned-char -ffast-math -fno-finite-math-only -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -fopenmp -O3 -DNDEBUG  -DNDEBUG
+--     C++ flags (Debug):           -march=native -mtune=native   -fsigned-char -ffast-math -fno-finite-math-only -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -fopenmp -g  -O0 -DDEBUG -D_DEBUG
+--     C Compiler:                  /usr/bin/cc
+--     C flags (Release):           -march=native -mtune=native   -fsigned-char -ffast-math -fno-finite-math-only -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fopenmp -O3 -DNDEBUG  -DNDEBUG
+--     C flags (Debug):             -march=native -mtune=native   -fsigned-char -ffast-math -fno-finite-math-only -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fopenmp -g  -O0 -DDEBUG -D_DEBUG
+--     Linker flags (Release):      -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  
+--     Linker flags (Debug):        -Wl,--gc-sections -Wl,--as-needed -Wl,--no-undefined  
+--     ccache:                      NO
+--     Precompiled headers:         NO
+--     Extra dependencies:          m pthread cudart_static dl rt nppc nppial nppicc nppidei nppif nppig nppim nppist nppisu nppitc npps cublas cudnn cufft -L/usr/local/cuda/lib64 -L/usr/lib/aarch64-linux-gnu
+--     3rdparty dependencies:
+-- 
+--   OpenCV modules:
+--     To be built:                 alphamat aruco bgsegm bioinspired calib3d ccalib core cudaarithm cudabgsegm cudacodec cudafeatures2d cudafilters cudaimgproc cudalegacy cudaobjdetect cudaoptflow cudastereo cudawarping cudev datasets dnn dnn_objdetect dnn_superres dpm face features2d flann freetype fuzzy gapi hdf hfs highgui img_hash imgcodecs imgproc intensity_transform line_descriptor mcc ml objdetect optflow phase_unwrapping photo plot python3 quality rapid reg rgbd saliency sfm shape signal stereo stitching structured_light superres surface_matching text tracking ts video videoio videostab wechat_qrcode xfeatures2d ximgproc xobjdetect xphoto
+--     Disabled:                    world
+--     Disabled by dependency:      -
+--     Unavailable:                 cannops cvv fastcv java julia matlab ovis python2 viz
+--     Applications:                perf_tests apps
+--     Documentation:               NO
+--     Non-free algorithms:         YES
+-- 
+--   GUI:                           GTK3
+--     GTK+:                        YES (ver 3.24.33)
+--     VTK support:                 NO
+-- 
+--   Media I/O: 
+--     ZLib:                        /usr/lib/aarch64-linux-gnu/libz.so (ver 1.2.11)
+--     JPEG:                        /usr/lib/aarch64-linux-gnu/libjpeg.so (ver 80)
+--     WEBP:                        build (ver decoder: 0x0209, encoder: 0x020f, demux: 0x0107)
+--     AVIF:                        NO
+--     PNG:                         /usr/lib/aarch64-linux-gnu/libpng.so (ver 1.6.37)
+--     TIFF:                        build (ver 42 - 4.6.0)
+--     JPEG 2000:                   build (ver 2.5.0)
+--     OpenEXR:                     build (ver 2.3.0)
+--     GIF:                         NO
+--     HDR:                         YES
+--     SUNRASTER:                   YES
+--     PXM:                         YES
+--     PFM:                         YES
+-- 
+--   Video I/O:
+--     FFMPEG:                      YES
+--       avcodec:                   YES (58.134.100)
+--       avformat:                  YES (58.76.100)
+--       avutil:                    YES (56.70.100)
+--       swscale:                   YES (5.9.100)
+--       avresample:                NO
+--     GStreamer:                   YES (1.20.3)
+--     v4l/v4l2:                    YES (linux/videodev2.h)
+-- 
+--   Parallel framework:            TBB (ver 2021.11 interface 12110)
+-- 
+--   Trace:                         YES (with Intel ITT(3.25.4))
+-- 
+--   Other third-party libraries:
+--     Lapack:                      YES (/usr/lib/aarch64-linux-gnu/liblapack.so /usr/lib/aarch64-linux-gnu/libcblas.so /usr/lib/aarch64-linux-gnu/libatlas.so)
+--     Eigen:                       YES (ver 3.4.0)
+--     Custom HAL:                  YES (carotene (ver 0.0.1))
+--     Protobuf:                    build (3.19.1)
+--     Flatbuffers:                 builtin/3rdparty (23.5.9)
+-- 
+--   NVIDIA CUDA:                   YES (ver 12.6, CUFFT CUBLAS FAST_MATH)
+--     NVIDIA GPU arch:             87
+--     NVIDIA PTX archs:            87
+-- 
+--   cuDNN:                         YES (ver 9.4.0)
+-- 
+--   Python 3:
+--     Interpreter:                 /usr/local/bin/python3 (ver 3.10.12)
+--     Libraries:                   /usr/lib/aarch64-linux-gnu/libpython3.10.so (ver 3.10.12)
+--     Limited API:                 NO
+--     numpy:                       /usr/local/lib/python3.10/dist-packages/numpy/core/include (ver 1.26.4)
+--     install path:                /usr/lib/python3/dist-packages/cv2/python-3.10
+-- 
+--   Python (for build):            /usr/local/bin/python3
+-- 
+--   Java:                          
+--     ant:                         NO
+--     Java:                        NO
+--     JNI:                         NO
+--     Java wrappers:               NO
+--     Java tests:                  NO
+-- 
+--   Install to:                    /usr
+-- -----------------------------------------------------------------
+-- 
+-- Configuring done (8.4s)
+-- Generating done (2.3s)
+-- Build files have been written to: /root/opencv/build
+```
