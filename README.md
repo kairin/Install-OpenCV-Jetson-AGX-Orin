@@ -63,3 +63,20 @@ referencing to this https://forums.developer.nvidia.com/t/where-can-i-find-these
 
 view errors encountered:  [ERRORS](https://github.com/kairin/Install-OpenCV-Jetson-AGX-Orin/blob/main/README-errors.md)
 
+```
+-- Installing: /usr/bin/opencv_model_diagnostics
+-- Set non-toolchain portion of runtime path of "/usr/bin/opencv_model_diagnostics" to "/usr/lib/aarch64-linux-gnu:/usr/local/cuda/lib64"
+Hit:1 http://ports.ubuntu.com/ubuntu-ports jammy InRelease
+Get:2 http://ports.ubuntu.com/ubuntu-ports jammy-updates InRelease [128 kB]
+Hit:3 https://apt.repos.intel.com/oneapi all InRelease
+Get:4 http://ports.ubuntu.com/ubuntu-ports jammy-backports InRelease [127 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports jammy-security InRelease [129 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports jammy-updates/main arm64 Packages [2,521 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports jammy-updates/universe arm64 Packages [1,470 kB]
+Fetched 4,376 kB in 3s (1,534 kB/s)                        
+Reading package lists... Done
+N: Skipping acquire of configured file 'main/binary-arm64/Packages' as repository 'https://apt.repos.intel.com/oneapi all InRelease' doesn't support architecture 'arm64'
+Congratulations!
+You've successfully installed OpenCV 4.11.0 on your Nano
+root@kkkORIN:/opt# 
+```
