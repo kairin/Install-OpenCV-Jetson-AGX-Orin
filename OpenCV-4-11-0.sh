@@ -48,7 +48,7 @@ install_opencv () {
   # if [[ $model == *"Jetson Nano"* ]]; then
     sudo apt-get install -y build-essential git unzip pkg-config zlib1g-dev
     sudo apt-get install -y python3-dev python3-numpy
-    sudo apt-get install -y python-dev python-numpy
+    #sudo apt-get install -y python-dev python-numpy kairin- this line causes to hang on agx orin.
     sudo apt-get install -y gstreamer1.0-tools libgstreamer-plugins-base1.0-dev
     sudo apt-get install -y libgstreamer-plugins-good1.0-dev
     sudo apt-get install -y libtbb2 libgtk-3-dev v4l2ucp libxine2-dev
