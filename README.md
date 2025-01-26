@@ -57,7 +57,6 @@ OpenCV will be installed in the `/usr` directory, all files will be copied to th
 - `/usr/share/opencv4` - other files (e.g. trained cascades in XML format)<br/>
 
 ------------
-
-[![paypal](https://qengineering.eu/images/TipJarSmall4.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CPZTM5BB3FCYL) 
-
-
+![image](https://github.com/user-attachments/assets/a30a7ed0-90ea-4cd0-b378-21f3e94a3ea0)
+in the install file, the sm_5.3 is in reference to the compute capability. i took a long time to figure out what it is referring to.
+referencing to this https://forums.developer.nvidia.com/t/where-can-i-find-these-numbers-in-cuda-arch-bin/283328 and reading up on this https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-capability where you can find the info in screenshot here https://developer.nvidia.com/cuda-gpus
