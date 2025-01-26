@@ -1,22 +1,23 @@
 #!/bin/bash
 set -e
 install_opencv () {
+  # kairin - the check indicates it is to ensure sufficient memory. editing it out and straight away install for AGX
   # Check if the file /proc/device-tree/model exists
-  if [ -e "/proc/device-tree/model" ]; then
-      # Read the model information from /proc/device-tree/model and remove null bytes
-      model=$(tr -d '\0' < /proc/device-tree/model)
-      # Check if the model information contains "Jetson Nano Orion"
-      echo ""
-      if [[ $model == *"Orin"* ]]; then
-          echo "Detecting a Jetson Nano Orin."
+  #if [ -e "/proc/device-tree/model" ]; then
+  #    # Read the model information from /proc/device-tree/model and remove null bytes
+  #    model=$(tr -d '\0' < /proc/device-tree/model)
+  #    # Check if the model information contains "Jetson Nano Orion"
+  #    echo ""
+  #    if [[ $model == *"Orin"* ]]; then
+  #        echo "Detecting a Jetson Nano Orin."
 	  # Use always "-j 4"
           NO_JOB=4
           ARCH=8.7
           PTX="sm_87"
-      elif [[ $model == *"Jetson Nano"* ]]; then
-          echo "Detecting a regular Jetson Nano."
-          ARCH=5.3
-          PTX="sm_53"
+      #elif [[ $model == *"Jetson Nano"* ]]; then
+      #    echo "Detecting a regular Jetson Nano."
+      #    ARCH=5.3
+      #    PTX="sm_53"
 	  # Use "-j 4" only swap space is larger than 5.5GB
 	  FREE_MEM="$(free -m | awk '/^Swap/ {print $2}')"
 	  if [[ "FREE_MEM" -gt "5500" ]]; then
@@ -25,18 +26,18 @@ install_opencv () {
 	    echo "Due to limited swap, make only uses 1 core"
 	    NO_JOB=1
 	  fi
-      else
-          echo "Unable to determine the Jetson Nano model."
-          exit 1
-      fi
+     # else
+     #     echo "Unable to determine the Jetson Nano model."
+     #     exit 1
+     # fi
       echo ""
-  else
-      echo "Error: /proc/device-tree/model not found. Are you sure this is a Jetson Nano?"
-      exit 1
-  fi
+  #else
+   #   echo "Error: /proc/device-tree/model not found. Are you sure this is a Jetson Nano?"
+    #  exit 1
+  #fi
   
-  echo "Installing OpenCV 4.11.0 on your Nano"
-  echo "It will take 3.5 hours !"
+  echo "Installing OpenCV 4.11.0"
+  # echo "It will take 3.5 hours !"
   
   # reveal the CUDA location
   cd ~
@@ -44,14 +45,14 @@ install_opencv () {
   sudo ldconfig
   
   # install the Jetson Nano dependencies first
-  if [[ $model == *"Jetson Nano"* ]]; then
+  # if [[ $model == *"Jetson Nano"* ]]; then
     sudo apt-get install -y build-essential git unzip pkg-config zlib1g-dev
     sudo apt-get install -y python3-dev python3-numpy
     sudo apt-get install -y python-dev python-numpy
     sudo apt-get install -y gstreamer1.0-tools libgstreamer-plugins-base1.0-dev
     sudo apt-get install -y libgstreamer-plugins-good1.0-dev
     sudo apt-get install -y libtbb2 libgtk-3-dev v4l2ucp libxine2-dev
-  fi
+  # fi
   
   if [ -f /etc/os-release ]; then
       # Source the /etc/os-release file to get variables
