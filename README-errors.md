@@ -567,3 +567,123 @@ In file included from /root/opencv_contrib/modules/cudaobjdetect/src/precomp.hpp
 [ 90%] Built target opencv_cudaobjdetect
 [ 90%] Processing OpenCL kernels (stitching)
 ```
+one more
+
+```
+[ 99%] Linking CXX executable ../../bin/opencv_perf_gapi
+[ 99%] Built target opencv_perf_gapi
+[ 99%] Building CXX object modules/cudaoptflow/CMakeFiles/opencv_cudaoptflow.dir/src/brox.cpp.o
+[ 99%] Building CXX object modules/cudaoptflow/CMakeFiles/opencv_cudaoptflow.dir/src/farneback.cpp.o
+[ 99%] Building CXX object modules/cudaoptflow/CMakeFiles/opencv_cudaoptflow.dir/src/nvidiaOpticalFlow.cpp.o
+[ 99%] Building CXX object modules/cudaoptflow/CMakeFiles/opencv_cudaoptflow.dir/src/pyrlk.cpp.o
+In file included from /root/opencv_contrib/modules/cudaoptflow/src/precomp.hpp:61,
+                 from /root/opencv_contrib/modules/cudaoptflow/src/brox.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+In file included from /root/opencv_contrib/modules/cudaoptflow/src/precomp.hpp:61,
+                 from /root/opencv_contrib/modules/cudaoptflow/src/pyrlk.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+In file included from /root/opencv_contrib/modules/cudaoptflow/src/precomp.hpp:61,
+                 from /root/opencv_contrib/modules/cudaoptflow/src/nvidiaOpticalFlow.cpp:7:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+In file included from /root/opencv_contrib/modules/cudaoptflow/src/precomp.hpp:61,
+                 from /root/opencv_contrib/modules/cudaoptflow/src/farneback.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+[ 99%] Building CXX object modules/cudaoptflow/CMakeFiles/opencv_cudaoptflow.dir/src/tvl1flow.cpp.o
+In file included from /root/opencv_contrib/modules/cudaoptflow/src/precomp.hpp:61,
+                 from /root/opencv_contrib/modules/cudaoptflow/src/tvl1flow.cpp:43:
+/root/opencv_contrib/modules/cudalegacy/include/opencv2/cudalegacy/private.hpp:94:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+   94 | #endif HAVE_CUDA
+      |        ^~~~~~~~~
+[ 99%] Linking CXX shared library ../../lib/libopencv_cudaoptflow.so
+[ 99%] Built target opencv_cudaoptflow
+[ 99%] Building NVCC (Device) object modules/superres/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_btv_l1_gpu.cu.o
+```
+one more
+```
+[ 99%] Building CXX object modules/cudaoptflow/CMakeFiles/opencv_perf_cudaoptflow.dir/perf/perf_main.cpp.o
+[ 99%] Building CXX object modules/cudaoptflow/CMakeFiles/opencv_perf_cudaoptflow.dir/perf/perf_optflow.cpp.o
+[ 99%] Building CXX object modules/superres/CMakeFiles/opencv_superres.dir/src/btv_l1.cpp.o
+[ 99%] Building CXX object modules/superres/CMakeFiles/opencv_superres.dir/src/btv_l1_cuda.cpp.o
+[ 99%] Linking CXX executable ../../bin/opencv_perf_cudaoptflow
+In file included from /root/opencv_contrib/modules/superres/src/precomp.hpp:82,
+                 from /root/opencv_contrib/modules/superres/src/btv_l1_cuda.cpp:46:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /root/opencv_contrib/modules/superres/src/precomp.hpp:82,
+                 from /root/opencv_contrib/modules/superres/src/btv_l1.cpp:46:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 99%] Built target opencv_perf_cudaoptflow
+[ 99%] Building CXX object modules/superres/CMakeFiles/opencv_superres.dir/src/frame_source.cpp.o
+[ 99%] Building CXX object modules/superres/CMakeFiles/opencv_superres.dir/src/input_array_utility.cpp.o
+[ 99%] Building CXX object modules/superres/CMakeFiles/opencv_superres.dir/src/optical_flow.cpp.o
+In file included from /root/opencv_contrib/modules/superres/src/precomp.hpp:82,
+                 from /root/opencv_contrib/modules/superres/src/frame_source.cpp:42:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[ 99%] Building CXX object modules/superres/CMakeFiles/opencv_superres.dir/src/super_resolution.cpp.o
+In file included from /root/opencv_contrib/modules/superres/src/precomp.hpp:82,
+                 from /root/opencv_contrib/modules/superres/src/input_array_utility.cpp:43:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[100%] Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/deblurring.cpp.o
+In file included from /root/opencv_contrib/modules/superres/src/precomp.hpp:82,
+                 from /root/opencv_contrib/modules/superres/src/optical_flow.cpp:43:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[100%] Building CXX object modules/superres/CMakeFiles/opencv_superres.dir/opencl_kernels_superres.cpp.o
+[100%] Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/fast_marching.cpp.o
+In file included from /root/opencv_contrib/modules/superres/src/precomp.hpp:82,
+                 from /root/opencv_contrib/modules/superres/src/super_resolution.cpp:43:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+[100%] Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/frame_source.cpp.o
+[100%] Linking CXX shared library ../../lib/libopencv_superres.so
+[100%] Built target opencv_superres
+[100%] Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/global_motion.cpp.o
+[100%] Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/inpainting.cpp.o
+[100%] Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/log.cpp.o
+[100%] Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/motion_stabilizing.cpp.o
+[100%] Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/optical_flow.cpp.o
+[100%] Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/outlier_rejection.cpp.o
+[100%] Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/stabilizer.cpp.o
+[100%] Building CXX object modules/videostab/CMakeFiles/opencv_videostab.dir/src/wobble_suppression.cpp.o
+[100%] Building CXX object modules/superres/CMakeFiles/opencv_perf_superres.dir/perf/perf_main.cpp.o
+[100%] Building CXX object modules/superres/CMakeFiles/opencv_perf_superres.dir/perf/perf_superres.cpp.o
+[100%] Linking CXX shared library ../../lib/libopencv_videostab.so
+[100%] Built target opencv_videostab
+[100%] Building CXX object modules/python3/CMakeFiles/opencv_python3.dir/__/src2/cv2_util.cpp.o
+[100%] Building CXX object modules/python3/CMakeFiles/opencv_python3.dir/__/src2/cv2_numpy.cpp.o
+[100%] Building CXX object modules/python3/CMakeFiles/opencv_python3.dir/__/src2/cv2.cpp.o
+[100%] Building CXX object modules/python3/CMakeFiles/opencv_python3.dir/__/src2/cv2_convert.cpp.o
+[100%] Building CXX object modules/python3/CMakeFiles/opencv_python3.dir/__/src2/cv2_highgui.cpp.o
+In file included from /root/opencv/build/modules/python_bindings_generator/pyopencv_generated_include.h:90,
+                 from /root/opencv/modules/python/src2/cv2.cpp:11:
+/root/opencv_contrib/modules/cudacodec/include/opencv2/cudacodec.hpp:386:20: warning: ‘class cv::cudacodec::NVSurfaceToColorConverter’ has virtual functions and accessible non-virtual destructor [-Wnon-virtual-dtor]
+  386 | class CV_EXPORTS_W NVSurfaceToColorConverter {
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /root/opencv/build/modules/python_bindings_generator/pyopencv_generated_include.h:91,
+                 from /root/opencv/modules/python/src2/cv2.cpp:11:
+/root/opencv_contrib/modules/cudafeatures2d/include/opencv2/cudafeatures2d.hpp:121:26: warning: ‘virtual void cv::cuda::DescriptorMatcher::clear()’ can be marked override [-Wsuggest-override]
+  121 |     CV_WRAP virtual void clear() = 0;
+      |                          ^~~~~
+/root/opencv_contrib/modules/cudafeatures2d/include/opencv2/cudafeatures2d.hpp:125:26: warning: ‘virtual bool cv::cuda::DescriptorMatcher::empty() const’ can be marked override [-Wsuggest-override]
+  125 |     CV_WRAP virtual bool empty() const = 0;
+      |                          ^~~~~
+[100%] Linking CXX executable ../../bin/opencv_perf_superres
+[100%] Built target opencv_perf_superres
+```
