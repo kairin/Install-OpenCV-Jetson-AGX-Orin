@@ -80,3 +80,23 @@ Congratulations!
 You've successfully installed OpenCV 4.11.0 on your Nano
 root@kkkORIN:/opt# 
 ```
+
+but it still doesn't solve the following error:
+
+```
+root@kkkORIN:/opt/comf# python3 main.py
+[START] Security scan
+[DONE] Security scan
+## ComfyUI-Manager: installing dependencies done.
+** ComfyUI startup time: 2025-01-27 06:44:07.526
+** Platform: Linux
+** Python version: 3.10.12 (main, Jan 17 2025, 14:35:34) [GCC 11.4.0]
+** Python executable: /usr/local/bin/python3
+** ComfyUI Path: /opt/comf
+** ComfyUI Base Folder Path: /opt/comf
+** User directory: /opt/comf/user
+** ComfyUI-Manager config path: /opt/comf/user/default/ComfyUI-Manager/config.ini
+** Log path: /opt/comf/user/comfyui.log
+[ComfyUI-Manager] Failed to restore opencv
+invalid literal for int() with base 10: '0+6b45caa'
+```
