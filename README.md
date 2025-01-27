@@ -100,3 +100,7 @@ root@kkkORIN:/opt/comf# python3 main.py
 [ComfyUI-Manager] Failed to restore opencv
 invalid literal for int() with base 10: '0+6b45caa'
 ```
+
+and likewise an issue with albumentations suggest that solving opencv would likely help with reinstalling this problem software.
+
+![image]
